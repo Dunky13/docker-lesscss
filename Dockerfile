@@ -1,6 +1,6 @@
 FROM node:alpine
 
-RUN npm install -g less
+RUN npm config set unsafe-perm true && npm install -g less
 
 ENTRYPOINT ["lessc"]
 CMD ["-"]
